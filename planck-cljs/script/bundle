@@ -42,12 +42,6 @@ fi
 
 FAST_BUILD="${FAST_BUILD:-0}"
 
-if [ ! -z "$TRAVIS_OS_NAME" ]
-then
-  echo "Because this is a CI build, setting FAST_BUILD=1"
-  FAST_BUILD=1
-fi
-
 CLOSURE_OPTIMIZATIONS="${CLOSURE_OPTIMIZATIONS:-SIMPLE}"
 
 if [ $FAST_BUILD == "1" ]
